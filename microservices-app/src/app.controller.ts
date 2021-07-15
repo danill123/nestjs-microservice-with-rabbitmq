@@ -9,7 +9,7 @@ export class AppController {
 
   @EventPattern('getlistuser')
   async procedlistuser(data: Record<string, unknown>) {
-    console.log("sdsadsadsadasd");
+    console.log("semula");
     return this.service.getUserList();
   }
 

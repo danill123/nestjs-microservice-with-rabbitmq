@@ -8,9 +8,9 @@ export class AppController {
   constructor(private readonly service: AppService) {}
 
   @EventPattern('getlistuser')
-  async procedlistuser(data: Record<string, unknown>) {
-    console.log(data.text);
-    return this.service.getUserList();
+  async procedlistusermicroservice(data: Record<string, unknown>) {
+    console.log("endpoint procedlistuser")
+    return (await this.service.getUserList()).toString;
   }
 
   @EventPattern('createnewuser')
